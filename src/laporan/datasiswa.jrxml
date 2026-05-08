@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="datasiswa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="final-report-uuid">
+
+    <queryString language="SQL">
+        <![CDATA[SELECT * FROM siswa]]>
+    </queryString>
+
+    <field name="kd_alternatif" class="java.lang.String"/>
+    <field name="NISN" class="java.lang.String"/>
+    <field name="Nama" class="java.lang.String"/>
+    <field name="tgllahir" class="java.sql.Date"/>
+    <field name="jk" class="java.lang.String"/>
+    <field name="Kelas" class="java.lang.String"/>
+    <field name="Alamat" class="java.lang.String"/>
+
+    <title>
+        <band height="100">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Laporan Data Siswa - MI Nurul Huda]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="35" width="555" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Alamat: Jl. KH. Wahid Hasyim Gg Parasdi Dlm I No.7, Bandung]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText><reportElement x="0" y="0" width="80" height="20"/><text><![CDATA[Kode]]></text></staticText>
+            <staticText><reportElement x="80" y="0" width="80" height="20"/><text><![CDATA[NISN]]></text></staticText>
+            <staticText><reportElement x="160" y="0" width="100" height="20"/><text><![CDATA[Nama]]></text></staticText>
+            <staticText><reportElement x="260" y="0" width="80" height="20"/><text><![CDATA[Tgl Lahir]]></text></staticText>
+            <staticText><reportElement x="340" y="0" width="50" height="20"/><text><![CDATA[JK]]></text></staticText>
+            <staticText><reportElement x="390" y="0" width="70" height="20"/><text><![CDATA[Kelas]]></text></staticText>
+            <staticText><reportElement x="460" y="0" width="95" height="20"/><text><![CDATA[Alamat]]></text></staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField><reportElement x="0" y="0" width="80" height="20"/><textFieldExpression><![CDATA[$F{kd_alternatif}]]></textFieldExpression></textField>
+            <textField><reportElement x="80" y="0" width="80" height="20"/><textFieldExpression><![CDATA[$F{NISN}]]></textFieldExpression></textField>
+            <textField><reportElement x="160" y="0" width="100" height="20"/><textFieldExpression><![CDATA[$F{Nama}]]></textFieldExpression></textField>
+            <textField>
+                <reportElement x="260" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd-MM-yyyy").format($F{tgllahir})]]></textFieldExpression>
+            </textField>
+            <textField><reportElement x="340" y="0" width="50" height="20"/><textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression></textField>
+            <textField><reportElement x="390" y="0" width="70" height="20"/><textFieldExpression><![CDATA[$F{Kelas}]]></textFieldExpression></textField>
+            <textField><reportElement x="460" y="0" width="95" height="20"/><textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression></textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="20">
+            <textField pattern="dd MMMM yyyy">
+                <reportElement x="395" y="0" width="160" height="20"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+
+</jasperReport>

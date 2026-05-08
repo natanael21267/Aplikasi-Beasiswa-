@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="7dc91cbe-2f69-4070-84b7-93669edfa241">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM penilaian]]>
+	</queryString>
+	<field name="kd_alternatif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NISN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C1" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C2" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C3" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C4" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C5" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="97" y="-12" width="442" height="103" uuid="220f28e2-85bb-40ad-a4f3-03acbdb87a62"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[MI.NURUL HUDA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-10" y="0" width="126" height="112" uuid="c535c4b6-04e6-4bda-84f6-ebcca6110d59"/>
+				<imageExpression><![CDATA["C:\\Users\\rulis\\OneDrive\\Documents\\joki\\Aplikasi_Beasiswa\\Aplikasi_Beasiswa1\\src\\laporan\\1-removebg-preview.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="458" height="20" backcolor="#666666" uuid="6c3e0416-103e-4365-998d-e89a90a8525a"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="57" height="15" uuid="d3c955a2-3e53-4b9b-bf75-b3134c2feabf"/>
+					<text><![CDATA[kd_alternatif]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="57" y="0" width="57" height="15" uuid="a5897891-efaf-44d6-852b-90e3e3193e4e"/>
+					<text><![CDATA[NISN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="114" y="0" width="57" height="15" uuid="454a1ed9-5ee6-4f11-a657-76e2c3bdfcc7"/>
+					<text><![CDATA[Nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="171" y="0" width="57" height="15" uuid="001a4b8b-1e26-42a1-aaf5-3c56500311cc"/>
+					<text><![CDATA[C1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="228" y="0" width="57" height="15" uuid="0e20a262-a9dd-4b58-96c7-848a84f7a658"/>
+					<text><![CDATA[C2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="285" y="0" width="57" height="15" uuid="7590c452-9e36-4f0c-9ef2-6374519e0b1e"/>
+					<text><![CDATA[C3]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="342" y="0" width="57" height="15" uuid="dc94de1d-a78e-436a-a411-d40f234f9d1c"/>
+					<text><![CDATA[C4]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="399" y="0" width="57" height="15" uuid="31578df0-7805-446f-80f1-26e0fb0da840"/>
+					<text><![CDATA[C5]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="458" height="15" uuid="901bcbf2-ca59-4e13-a031-be23060cfdc5"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="57" height="15" uuid="2b87d2a2-f746-4db1-ad77-812056fe050c"/>
+					<textFieldExpression><![CDATA[$F{kd_alternatif}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="57" y="0" width="57" height="15" uuid="68570937-47db-4b1e-9994-aaa472d4ce91"/>
+					<textFieldExpression><![CDATA[$F{NISN}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="114" y="0" width="57" height="15" uuid="eec5e1a5-ba18-4258-acf3-bc2853fa5821"/>
+					<textFieldExpression><![CDATA[$F{Nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="171" y="0" width="57" height="15" uuid="6e310f86-fb0f-40a1-930c-ca74fb1b3c86"/>
+					<textFieldExpression><![CDATA[$F{C1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="228" y="0" width="57" height="15" uuid="187d8ec9-6c49-42f4-b839-55c403a90c9a"/>
+					<textFieldExpression><![CDATA[$F{C2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="285" y="0" width="57" height="15" uuid="81f8f24b-71cc-4836-a3e8-a48932ec6bab"/>
+					<textFieldExpression><![CDATA[$F{C3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="342" y="0" width="57" height="15" uuid="0ace3c41-e6fe-47b1-807f-676a32059933"/>
+					<textFieldExpression><![CDATA[$F{C4}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="399" y="0" width="57" height="15" uuid="04fd7ebe-dc54-4e51-8ba9-bcf6f9e67915"/>
+					<textFieldExpression><![CDATA[$F{C5}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="458" height="1" uuid="0f65a48f-c90f-4f8d-9f18-41dae7bcd65f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="424" y="0" width="131" height="20" forecolor="#000000" uuid="d7f0f578-81f9-46dd-a4ba-92b0c3b8007b"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="96" y="0" width="267" height="20" forecolor="#000000" uuid="05767fa8-6c95-45e7-bb2b-52d692be4e57"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
